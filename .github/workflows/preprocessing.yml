@@ -24,9 +24,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas scikit-learn
 
-      - name: Run Automated preprocessing Script
+      - name: Debug — List All Files
         run: |
-          python "preprocessing/automate_Nur-Bintang-Hidayat.py"
+          echo "Current working directory: $PWD"
+          echo "Listing all files recursively:"
+          ls -R
+
+      - name: Run Automated Preprocessing Script
+        run: |
+          python "$GITHUB_WORKSPACE/preprocessing/automate_Nur-Bintang-Hidayat.py"
 
       - name: Upload Processed Dataset
         uses: actions/upload-artifact@v4
