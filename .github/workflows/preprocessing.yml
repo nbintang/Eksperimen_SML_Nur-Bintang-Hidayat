@@ -29,11 +29,14 @@ jobs:
           echo "Current working directory:"
           pwd
           echo ""
-          echo "List of all files recursively from here:"
+          echo "List of all files recursively:"
           ls -R
           echo ""
-          echo "Check if automate_Nur-Bintang-Hidayat.py exists:"
-          find . -type f -name "automate_Nur-Bintang-Hidayat.py" || echo "⚠️ File not found!"
+          echo "Check preprocessing folder:"
+          ls -la preprocessing/ || echo "⚠️ preprocessing folder not found!"
+          echo ""
+          echo "Find the script:"
+          find . -name "*.py" -type f
 
       - name: Run Automated Preprocessing Script
         run: |
