@@ -24,12 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas scikit-learn
 
-      - name: Run Automated Preprocessing Script
+      - name: Run Automated preprocessing Script
         run: |
-          python "Preprocessing/automate_Nur-Bintang-Hidayat.py"
+          python "preprocessing/automate_Nur-Bintang-Hidayat.py"
 
       - name: Upload Processed Dataset
         uses: actions/upload-artifact@v4
         with:
           name: processed_dataset
-          path: Preprocessing/IEA_Global_EV_Data_2024_cleaned.csv
+          path: preprocessed/IEA_Global_EV_Data_2024_cleaned.csv

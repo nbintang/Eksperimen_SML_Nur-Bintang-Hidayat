@@ -61,5 +61,5 @@ def automate_preprocessing(input_path, output_path):
 if __name__ == "__main__":
     automate_preprocessing(
         input_path='IEA_Global_EV_Data_2024.csv',
-        output_path='Preprocessing/IEA_Global_EV_Data_2024_cleaned.csv'
+        output_path='preprocessed/IEA_Global_EV_Data_2024_cleaned.csv'
     )
